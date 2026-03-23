@@ -43,7 +43,7 @@ Steps:<br>
 **Updated Feb 2026**<br>
 1. Install dependencies: 
 <pre>
- install libgl-dev libxxf86vm-dev libglu1-mesa-dev libglew-dev
+ apt install libgl-dev libxxf86vm-dev libglu1-mesa-dev libglew-dev
 </pre>
 2. Clone the flock2 and libmin repos as sibling folders.
 3. Modify the build.sh and set CUDA_PATH to your CUDA Toolkit location (run: which nvcc)
