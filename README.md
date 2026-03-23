@@ -43,8 +43,12 @@ Steps:<br>
 **Updated Feb 2026**<br>
 1. Clone the flock2 and libmin repos as sibling folders.
 2. Modify the build.sh and set CUDA_PATH to your CUDA Toolkit location (run: which nvcc)
-3. Set the CUDA_ARCH to your GPU hardware arch.
-eg. 60=Pascal, 70=Volta, 75=Turing, 80=Ampere, 86=RTX 3x, 89=RTX 4x, 120=RTX 5x
+3. Set the CUDA_ARCH to your GPU compute capability (hardware arch).
+To find your GPU compute capability:
+- Locate your card here: <a href="https://developer.nvidia.com/cuda/gpus">https://developer.nvidia.com/cuda/gpus</a>
+- Or here (older cards): <a href="https://developer.nvidia.com/cuda/gpus/legacy">https://developer.nvidia.com/cuda/gpus/legacy</a>
+- The arch # is simply the compute capability without the dot. eg. 8.9 => 89
+- Common ones are: 60=Pascal, 70=Volta, 75=Turing, 80=Ampere, 86=RTX 3x, 89=RTX 4x, 120=RTX 5x
 4. Run ./build.sh
 5. Run build/flock2
 6. For debugging/coding. Enable LINUX_DEBUG in build.sh. A VSCode launch.json has been provided for convenience in debugging. We recommend to open VSCode to the \codes folder (not \codes\flock2), which gives you access to view & modify both \flock2 and \libmin.
