@@ -1,10 +1,10 @@
 
 export CUDA_PATH=/usr/local/cuda-12.1
-export CUDA_ARCH=60
-# export LINUX_DEBUG
+export CUDA_ARCH=89
 
 cmake CMakeLists.txt \
     -DLIBMIN_ROOT=../libmin \
+    -DCMAKE_BUILD_TYPE=Release \
     -Bbuild \
     -DBUILD_CUDA=true \
     -DBUILD_OPENGL=true \
